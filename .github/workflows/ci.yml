@@ -1,7 +1,7 @@
 name: Continuous Integration
 on: [push]
 jobs:
-  job_1:
+  CI_Steps:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
