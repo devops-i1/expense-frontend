@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: Continuous Integration
 on: [push]
 jobs:
   job_1:
