@@ -5,4 +5,5 @@ jobs:
     uses: devops-i1/github-reusable-workflow/.github/workflows/ci.yml@main
     with:
       project_name: frontend-expense
+      npm_install: false
     secrets: inherit
