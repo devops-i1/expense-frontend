@@ -1,16 +1,8 @@
 name: Continuous Integration
 on: [push]
 jobs:
-  CI_Steps:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code Checkout
-        uses: actions/checkout@v4
-      - run: echo OK
-        name: Code Build
-      - run: echo OK
-        name: Code Test
-      - run: echo OK
-        name: Code Review
-      - run: echo OK
-        name: Release Software
+  call-continuous-integration-reusable:
+    uses: devops-i1/github-reusable-workflow/.github/workflows/ci.yml@main
+    with:
+      project_name: frontend-expense
+    secrets: inherit
