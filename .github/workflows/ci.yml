@@ -1,5 +1,9 @@
 name: Continuous Integration
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - 'EXP-**'
 jobs:
   call-continuous-integration-reusable:
     uses: devops-i1/github-reusable-workflow/.github/workflows/ci.yml@main
