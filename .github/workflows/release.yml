@@ -8,6 +8,6 @@ jobs:
     uses: devops-i1/github-reusable-workflow/.github/workflows/release.yml@main
     with:
       project_name: frontend-expense
-      npm_install: true
+      npm_install: false
       release_archive_file: "*.js package.json schema VERSION"
     secrets: inherit
