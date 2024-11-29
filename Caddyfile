@@ -1,0 +1,20 @@
+{
+    admin :2019
+    servers {
+        metrics
+    }
+}
+:80 {
+  root * /app
+  file_server
+  handle_path /api/* {
+    reverse_proxy backend-{{ env }}.akhilsaidevops.online:8080
+  }
+  respond /health "OK" 200 {
+  		close
+  }
+  log {
+    format json
+    output stdout
+  }
+}
