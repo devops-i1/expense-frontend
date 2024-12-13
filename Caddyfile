@@ -8,7 +8,7 @@
   root * /app
   file_server
   handle_path /api/* {
-    reverse_proxy backend-{{ env }}.akhilsaidevops.online:8080
+    reverse_proxy backend
   }
   respond /health "OK" 200 {
   		close
